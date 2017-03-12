@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myContacts" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myContacts" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myContacts" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myContacts" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Contacts App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>My Contacts</h1>
+        <br>
+      </div>
+    </div>
+    <div ng-view></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyACGkqesaGj_OEWOT5M7FkreLPeQ5rLEg0",
+      authDomain: "jpo-mycontactapp.firebaseapp.com",
+      databaseURL: "https://jpo-mycontactapp.firebaseio.com",
+      storageBucket: "jpo-mycontactapp.appspot.com",
+      messagingSenderId: "575211171654"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js"></script>
+  <script src="app.js"></script>
+  <script src="contacts/contacts.js"></script>
+</body>
+</html>
